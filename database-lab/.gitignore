@@ -1,0 +1,27 @@
+# Segredos
+.env
+
+# Material de aula (não publicar — direitos do professor)
+*.pdf
+*.docx
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# === Segredos (NUNCA commitar) - politica Gabriel 2026-06-27 ===
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+id_rsa*
+key.json
+client_secret*.json
+*service-account*.json
+credentials*.json
+SENHAS.xlsx
+*.keystore
+*.pfx

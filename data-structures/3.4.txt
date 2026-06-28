@@ -1,0 +1,22 @@
+Considerando que todos os elementos são distintos, o elemento de menor prioridade estará armazenado o mais à direita possível, na última fileira de galhos.
+
+Ex: 34, 21, 13, 8, 5, 3, 2, 1
+A árvore se organizaria da seguinte maneira:
+
+                        34
+                    21      13
+                8    5     3   2
+            1
+
+Ex2: 10, 9, 8, 7, 6, 5, 4, 3, 2, 1
+
+                        10
+                    9       8
+                7    6     5   4
+            3   2   1
+
+Ex3: 12, 10, 8, 6, 4, 2, 1
+
+                12
+            10      8
+        6    4     2   1

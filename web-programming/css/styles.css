@@ -1,0 +1,14 @@
+table {
+    text-align: left;
+    border: 1px solid;
+    width: 50%;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+.compact {
+    padding: 20px;
+}

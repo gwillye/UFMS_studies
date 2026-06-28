@@ -1,0 +1,24 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# logs / temp
+*.log
+node_modules/
+
+# === Segredos (NUNCA commitar) - politica Gabriel 2026-06-27 ===
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+id_rsa*
+key.json
+client_secret*.json
+*service-account*.json
+credentials*.json
+SENHAS.xlsx
+*.keystore
+*.pfx

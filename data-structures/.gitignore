@@ -1,0 +1,26 @@
+# Compilados C/C++
+*.o
+*.out
+a.out
+*.exe
+*.obj
+
+# OS / editor
+.vscode/
+.DS_Store
+Thumbs.db
+
+# === Segredos (NUNCA commitar) - politica Gabriel 2026-06-27 ===
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+id_rsa*
+key.json
+client_secret*.json
+*service-account*.json
+credentials*.json
+SENHAS.xlsx
+*.keystore
+*.pfx
