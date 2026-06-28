@@ -1,0 +1,46 @@
+body
+{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(252, 184, 237);
+}
+h1, h2
+{
+    color: black;
+}
+nav
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgb(226, 59, 204);
+    text-decoration: none;
+}
+nav a
+{
+    text-decoration: none;
+    color: blanchedalmond;
+    font-weight: 800;
+    font-size: 30px;
+    text-align: center;
+}
+nav ul
+{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    background-color: rgb(226, 59, 204);
+    padding: 0px;
+    width: 100%;
+    font-size: 15px;
+    text-decoration: none;
+}
+nav ul li
+{
+    list-style: none;
+}
+nav ul li a
+{
+    text-decoration: none;
+    width: 100%;
+    padding: 10px;
+}

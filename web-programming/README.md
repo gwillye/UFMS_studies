@@ -25,3 +25,6 @@ npm start          # http://localhost:3000
 
 ## Stack
 HTML5 · CSS3 · JavaScript (vanilla) · React (Create React App)
+
+## doceria-react
+A confectionery storefront rebuilt as a Vite + React app (catalog, order form, cart with localStorage). Code-complete; run with `npm i && npm run dev`. Original HTML kept under `legacy/`.
