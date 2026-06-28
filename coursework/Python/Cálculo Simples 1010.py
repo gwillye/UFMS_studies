@@ -1,0 +1,11 @@
+cod1, n1, vu1 = input().split()
+cod2, n2, vu2 = input().split()
+cod1 = int(cod1)
+cod2 = int(cod2)
+n1 = int(n1)
+n2 = int(n2)
+vu1 = float(vu1)
+vu2 = float(vu2)
+
+VP = (n1 * vu1) + (n2 * vu2)
+print("VALOR A PAGAR: R$ %.2f" %VP)

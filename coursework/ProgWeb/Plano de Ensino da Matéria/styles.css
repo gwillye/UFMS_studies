@@ -1,0 +1,26 @@
+* {
+  margin: auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+#cabecario {
+  font-family: Arial;
+  border: 1px solid;
+  margin: 0;
+  width: 100%;
+  margin-top: auto;
+}
+
+
+
+#cabecario td {
+	font: italic;
+}
+
+#cabecario th {
+  padding: 2px;
+  text-align: left;
+}

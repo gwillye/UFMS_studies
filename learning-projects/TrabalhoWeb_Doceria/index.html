@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"Formulário"</title>
+    <link rel="stylesheet" href="CSS.css">
+</head>
+<body>
+    <h1>Faça aqui sua Reserva!</h1>
+    <form method="post" action="#" oninput="total.value = (noites.valueAsNumber * 150) + (hospedes.valueAsNumber * 75) - 75">
+    <div id="nome_form" class="campo">
+        <br>
+        <label>Nome:</label>
+        <input type="text" name="nome" placeholder="Digite seu Nome aqui" required>
+        <br><br>
+    </div> 
+
+    <div id="email_form"  class="campo">
+        <label>E-mail:</label>
+        <input type="email" name="email" placeholder="Digite seu e-mail" required>
+        <br><br>
+    </div>
+
+    <div id="email_form"  class="campo">
+        <label>Repita seu E-mail:</label>
+        <input type="email" name="email_repeti" placeholder="Repita o seu e-mail" required oninput="check (this)">
+        <br><br>
+    </div>
+
+    <div id="password_form"  class="campo">
+        <label>Senha:</label>
+        <input type="password" name="senha" placeholder="Escolha uma senha" required>
+        <br><br>
+    </div>
+
+    <div id="chegada_form"  class="campo"> 
+        Quando você vai chegar? <input type="date" name="Chegada" required>
+        <br><br>
+    </div>
+
+    <div id="sexo_form"  class="campo"> 
+        <label>Declare seu sexo:</label>
+        <br><br>
+        <input type="radio" name="sexo" value="Masculino">Masculino
+        <br>
+        <input type="radio" name="sexo" value="Feminino">Feminino
+        <br><br>
+    </div>
+
+    <div id="preco_form" class="campo" >
+        <label>Quantas noites você pretende ficar aqui? (R$  150,00 por noite):</label>
+        <input type="number" name="noites" value="1" min="1" max="30" required>
+        <br><br>
+        <label>Qual o número previsto de hóspedes? (R$ 75,00 adicional por hóspede):</label>
+        <input type="number" name="hospedes" value="1" min="1" max="4" required>
+        <br><br>
+    </div>
+    
+    <fieldset class="grupo">
+        <div>
+                   
+            <label> Total a ser pago: R$  </label>
+                <output id="total" name="total" > 
+                </output>,00
+        </div>
+    </fieldset>
+
+    <div id="foto_form" class="campo"> 
+        <label> (Opcional) Escolha uma foto para seu perfil:</label>
+        <br><br>
+        <input type="file" name="foto">
+    <br><br>
+    </div> 
+
+    <div id="mensagem_form" class="campo">
+        <label>(Opcional) Digite informações adicionais aqui: </label>
+        <br>
+        <textarea name="msn" >
+        </textarea>
+    </div>
+
+    <div id="submit_form" class="campo">
+        <input type="submit" name="enviar" value="Enviar"> 
+        <br><br>
+    </div>   
+    </form>
+    
+    
+</body>
+</html>

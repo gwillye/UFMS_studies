@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilização geral */
+body {
+    background-color: #e4407c;
+    color: #590515;
+}
+
+/* Estilização da barra superior */
+.barrasuperior {
+    background-color: #cc1848;
+    display: flex;
+    height: 150px;
+    flex-direction: row;
+    align-items: center;
+}
+
+.barrasuperior img {
+    width: 150px;
+    height: 150px;
+    margin: 0 20px; /* Adicione margem à direita para separar a imagem do texto */
+    border-radius: 5px;
+}
+
+.barrasuperior a {
+    text-decoration: none;
+    color: blanchedalmond;
+    font-weight: 800;
+    font-size: 30px;
+    text-align: center;
+}
+
+.barrasuperior ul {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0;
+    width: 100%;
+    font-size: 15px;
+}
+
+.barrasuperior ul li {
+    list-style: none;
+}
+
+.barrasuperior ul li a {
+    text-decoration: none;
+    width: 100%;
+    padding: 10px;
+}
+
+/* Estilização do cabeçário da página inicial */
+h1 {
+    text-align: center;
+    color: #590515;
+}
+
+h2 {
+    text-align: center;
+}
+
+/* CSS para centralizar e aumentar o tamanho do texto */
+.Reserva {
+    margin-left: 20px;
+    font-size: 24px; /* Tamanho da fonte em pixels (ajuste conforme necessário) */
+    color: black;
+}
+
+/* Recursividade */
+@media (max-width: 768px) { /* Defina o ponto de quebra para celular (por exemplo, 768px) */
+    .barrasuperior {
+        height: 10%; /* Altura de 10% para tela de celular */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) { /* Defina o ponto de quebra para tablet (por exemplo, 769px a 1024px) */
+    .barrasuperior {
+        height: 15%; /* Altura de 15% para tela de tablet */
+    }
+}

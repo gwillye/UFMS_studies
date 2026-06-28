@@ -1,0 +1,100 @@
+* {
+    margin: 0%;
+}
+
+/* Estilização geral */
+body {
+    background-color: #e4407c;
+    color: #590515;
+}
+
+/* Estilização da barra superior */
+.barrasuperior {
+    background-color:#cc1848;
+    display: flex;
+    height: 150px;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+  }
+
+.barrasuperior img {
+    width: 150px;
+    height: 150px; 
+    margin: 0;
+    border-radius: 5px;
+  }
+
+.barrasuperior a
+{
+    text-decoration: none;
+    color: blanchedalmond;
+    font-weight: 800;
+    font-size: 30px;
+    text-align: center;
+}
+.barrasuperior ul
+{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    width: 100%;
+    font-size: 15px;
+    text-decoration: none;
+}
+.barrasuperior ul li
+{
+    list-style: none;
+}
+.barrasuperior ul li a
+{
+    text-decoration: none;
+    width: 100%;
+    padding: 10px;
+}
+
+/* Estilização do cabeçário da página inicial */
+h1 {
+    text-align: center;
+    color: #590515;
+}
+h2 {
+    text-align: center;
+}
+
+/* Estilização das informações da página inicial */
+
+.informacoes img {
+    width: 300px;
+    height: 300px; 
+    margin: 0;
+    float: left;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.informacoes section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.informacoes p{
+    margin-right: 2.5%;
+    text-align: justify;
+    font-size: 25px;
+}
+
+/* Recursividade */
+@media (max-width: 768px) { /* Defina o ponto de quebra para celular (por exemplo, 768px) */
+    .barrasuperior {
+        height: 10%; /* Altura de 10% para tela de celular */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) { /* Defina o ponto de quebra para tablet (por exemplo, 769px a 1024px) */
+    .barrasuperior {
+        height: 15%; /* Altura de 15% para tela de tablet */
+    }
+}

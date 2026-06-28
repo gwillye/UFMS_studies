@@ -1,0 +1,126 @@
+//Código implementado com a ajuda de Davi Lima Nogueira para um trabalho na matéria de Organização de Computadores, ministrada pelo professor Ricardo Santos na Faculdade de Computação da UNiversidade Federal de Mato Grosso do Sul (FACOM UFMS) no ano de 2023.
+/*Um algoritmo de divisão com restauração nada mais é além de um programa que recebe um quociente e divisor, e opera uma conta de divisão, imprimindo o resultado e o resto. Para efetuar isso, porém, diferentemente dos algoritmos mais simples e comumente usados, ele manipula os bits dos valores envolvidos para fazer esta operação.
+O algoritmo descrito acima funciona baseado nos seguintes passos:
+Passo 1: Se inicializa os registradores com seus valores(para fins demonstrativos, serão chamados de D = dividendo; d = divisor; o A = auxiliar; n = número de bits no dividendo);
+Passo 2: Se considera os registradores A e D como apenas uma unidade e o bit mais significativo de D se desloca para a esquerda, indo para o A;
+Passo 3: Se subtrai A – d, e o resultado é armazenado em A;
+Passo 4: Se verifica o bit mais significativo de A. Se for 0, o bit menos significativo de D é definido como 1, caso contrário, o bit mais significativo de D é definido como 0 e se restaura o valor que A recebeu no Passo 2;
+Passo 5: Se decrementa o valor de n;
+Passo 6: Averigua se o valor de n equivale a zero. Se sim, o loop é encerrado. Se não, repete-se as etapas a partir do Passo 2; */
+
+#include <stdio.h>
+int removerBitMaisSignificativo(int dec, int bits)
+{
+    int binary[bits];
+    int i = 0;
+    while (dec > 0)
+    {
+        binary[i] = dec % 2;
+        dec = dec / 2;
+        i++;
+    }
+    while (i < bits)
+    {
+        binary[i] = 0;
+        i++;
+    }
+
+    int resultado = 0;
+    for (int j = bits - 1; j >= 0; j--)
+    {
+        if(j != bits-1){
+            resultado = resultado + binary[j] * pow(2,j+1);
+        }
+    }
+
+   return resultado;
+    
+}
+int desvioAEsquerda(num)
+{
+  if (num == 0)
+    {
+        return 0;
+    }
+
+    unsigned int binary[32];
+    int i = 0;
+
+    while (num > 0)
+    {
+        binary[i] = num % 2;
+        num /= 2;
+        i++;
+    }
+
+    if (i % 4 != 0)
+    {
+        return 0;
+    }
+    return 1;
+}
+
+int bitMaisSignificativo(int decimal)
+{
+    if (decimal < 0)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}
+int tamanho(num)
+{
+int count = 1;
+    // Converte o número para binário e conta o número de dígitos binários
+    for (unsigned int i = 1u << 31; i > 0; i >>= 1)
+    {
+        if (num & i)
+        {
+            count++;
+        }
+    }
+    return count;
+}
+
+int main(int argc, char **argv)
+{
+    unsigned int q = 0; // dividendo
+    unsigned int m = 0; // divisor
+    unsigned int a = 0;
+    unsigned int antes_da_subtracao = 0;
+    unsigned int bit_deslocado_q = 0;
+
+    printf("Digite um dividendo: ");
+    scanf("%d", &q);
+    printf("Digite um divisor : ");
+    scanf("%d", &m);
+    int tamanhoBits = tamanho(q);
+    for (size_t i = tamanhoBits; i > 0; i--)
+    {
+        bit_deslocado_q = desvioAEsquerda(q);
+    
+        q = removerBitMaisSignificativo(q, tamanhoBits);
+    
+        a = (a << 1) | bit_deslocado_q;
+        antes_da_subtracao = a;
+        a = a - m;
+
+        if (bitMaisSignificativo(a) == 1)
+        {
+            a = antes_da_subtracao;
+        }
+        else
+        {
+            // aplica a máscara para mudar o último bit para 1
+            q |= 1;
+        }
+    }
+    printf(" Valor a(Resto) => %d\n", a);
+    printf(" Valor m => %d\n", m);
+    printf(" Valor q(Quociente) => %d\n", q);
+
+    return 0;
+}

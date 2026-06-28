@@ -1,0 +1,22 @@
+'''
+Proponha uma maneira de calcular o fatorial de uma lista de números usando uma solução concorrente
+'''
+
+import concurrent.futures
+
+def fat(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n * fat(n-1)
+
+def calc_fat(lista_numeros):
+    with concurrent.futures.ThreadPoolExecutor() as executor:
+        resp = executor.map(fat, lista_num)
+    return list(resp)
+
+
+lista_num = [1, 2, 3, 4, 5]
+result = calc_fat(lista_num)
+print("Input:", lista_num)
+print("Output:", result)
