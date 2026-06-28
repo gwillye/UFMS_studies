@@ -1,6 +1,22 @@
 # 🗄️ Database Lab
 
-SQL scripts and containerized database environments from the **Databases Lab** course (UFMS): schema modeling (DDL), data loading (DML), queries, triggers, and spinning up DBMSs with Docker (PostgreSQL and MySQL).
+A **sales database** project from the Databases Lab course (UFMS): schema modeling (DDL), data loading (DML), analytical queries, triggers — runnable two ways: a **zero-setup SQLite demo** (Python stdlib) or the full **PostgreSQL/MySQL Docker** stack.
+
+## ▶️ Quick run (SQLite — no Docker, no dependencies)
+```bash
+cd runnable
+python run_demo.py
+```
+Builds the schema, loads a sample dataset, and runs the analytical queries (revenue per seller, top products, revenue by state, average ticket, monthly trend), printing each as a table — then a self-check that the sale totals reconcile with the line items. Example:
+```
+### Top products by revenue
+  product     units  revenue
+  Notebook    3      10300.0
+  Smartphone  3      6500.0
+  ...
+self-check: OK (sales totals reconcile with sale items)
+```
+SQL lives in `runnable/schema.sql`, `runnable/seed.sql`, `runnable/analytics.sql`.
 
 ## Contents
 | File | Description |
