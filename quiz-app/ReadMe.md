@@ -1,41 +1,38 @@
-# 🎯 Quiz ProgWeb — plataforma de quizzes
+# 🎯 Quiz App — quiz platform
 
-Aplicação web (front-end) para **criar, jogar e ranquear quizzes**, desenvolvida na disciplina de **Programação Web (UFMS, 2023/02)**. Interface multi-página em HTML/CSS/JavaScript puro.
+> *Academic context — UFMS, Web Programming course (2023/02).*
 
-**Autores:** Gabriel Willye Borges Valençoela · Lucas Lacerda Arruda.
+A front-end web app to **create, play and rank quizzes**. Multi-page interface in plain HTML/CSS/JavaScript.
 
-## ✨ Funcionalidades
-- **Autenticação:** telas de login e cadastro de usuário.
-- **Criar quiz:** montagem de perguntas/alternativas (`criar-quiz.js`).
-- **Jogar quiz:** fluxo de partida (`jogar-quiz` → `play-quiz` → `resultado`).
-- **Ranking:** classificação por quiz e geral (`ranking`, `ranking-quiz`, `menu-ranking`).
-- **Sobre:** página da equipe (`about-us`).
+**Authors:** Gabriel Willye Borges Valençoela · Lucas Lacerda Arruda.
 
-## 🗂️ Estrutura (páginas)
+## Features
+- **Authentication:** login and sign-up screens.
+- **Create quiz:** build questions / answers (`criar-quiz.js`).
+- **Play quiz:** match flow (`jogar-quiz` → `play-quiz` → `resultado`).
+- **Ranking:** per-quiz and overall leaderboards (`ranking`, `ranking-quiz`, `menu-ranking`).
+- **About:** team page (`about-us`).
+
+## Structure (pages)
 ```
-index.html / tela-inicial.css   # entrada
-login.html  · cadastro.html     # autenticação
-menu.html   · menu-ranking.html # navegação
-criar-quiz.html + criar-quiz.js # criação de quiz
-jogar-quiz / play-quiz / quiz   # execução
-ranking / ranking-quiz          # placares
-resultado.html                  # resultado final
-about-us.html                   # equipe
-*.css                           # estilos por página
-*.png                           # logo + telas (screenshots)
+index.html / tela-inicial.css   # entry
+login.html  · cadastro.html     # authentication
+menu.html   · menu-ranking.html # navigation
+criar-quiz.html + criar-quiz.js # quiz creation
+jogar-quiz / play-quiz / quiz   # gameplay
+ranking / ranking-quiz          # leaderboards
+resultado.html                  # final result
+about-us.html                   # team
+*.css                           # per-page styles
+*.png                           # logo + screenshots
 ```
 
-## ▶️ Como executar
-Projeto **estático** — não precisa de build nem servidor:
+## How to run
+Static project — no build or server required:
 ```bash
-# abra index.html no navegador, ou sirva a pasta:
-python -m http.server 8000   # depois acesse http://localhost:8000
+# open index.html in the browser, or serve the folder:
+python -m http.server 8000   # then open http://localhost:8000
 ```
 
-## 🛠️ Stack
+## Stack
 HTML5 · CSS3 · JavaScript (vanilla)
-
-## 🖼️ Telas
-Capturas incluídas no repositório: `logo.png`, `jogarquiz.png`, `criarquiz.png`, `ranking.png`, `Desenvolvedores.png`.
-
-> 📝 Trabalho acadêmico (turma 02 — 2023/02). README reescrito para publicação; os protótipos Balsamiq e relatórios em PDF citados na versão original do trabalho não estão nesta árvore.

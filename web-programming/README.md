@@ -1,27 +1,27 @@
-# 🌐 Estudos de Programação Web (UFMS)
+# 🌐 Web Programming studies (UFMS)
 
-Coletânea de exercícios e protótipos da disciplina de **Programação Web (UFMS)** — fundamentos de front-end com HTML/CSS/JavaScript e uma aplicação em React.
+> *Academic context — UFMS, Web Programming course.*
 
-## 📦 Conteúdo
-| Pasta / arquivo | O que é |
+A collection of front-end exercises and prototypes — HTML/CSS/JavaScript fundamentals plus a React application.
+
+## Contents
+| Folder / file | What it is |
 |---|---|
-| `index.html` + `css/` | Página inicial da coletânea. |
-| `Alert/` | Exercício de interação (alert/DOM). |
-| `Fatoração/` | Algoritmo de fatoração em JS (`script.js`). |
-| `Manipulação DOM/` | Manipulação de DOM com JavaScript (`script.js`). |
-| `web1/` | **Aplicação React** (Create React App) — destaque do conjunto. |
+| `index.html` + `css/` | Landing page for the collection. |
+| `Alert/` | Interaction exercise (alert / DOM). |
+| `Fatoração/` | Factorization algorithm in JS (`script.js`). |
+| `Manipulação DOM/` | DOM manipulation with JavaScript (`script.js`). |
+| `web1/` | **React application** (Create React App) — the highlight. |
 
-## ▶️ Como rodar
-**Exercícios estáticos** (Alert, Fatoração, Manipulação DOM): abra o `index.html` da pasta no navegador.
+## How to run
+**Static exercises** (Alert, Fatoração, Manipulação DOM): open the folder's `index.html` in the browser.
 
-**App React** (`web1/`):
+**React app** (`web1/`):
 ```bash
 cd web1
 npm install
 npm start          # http://localhost:3000
 ```
 
-## 🛠️ Stack
+## Stack
 HTML5 · CSS3 · JavaScript (vanilla) · React (Create React App)
-
-> 📝 Coletânea acadêmica (UFMS). Cada subpasta é um exercício independente; `web1` é o projeto mais completo (SPA React).

@@ -1,43 +1,36 @@
-# 🌐 Computação Distribuída — App Flask (MVC) + Docker
+# 🌐 Distributed Computing — Flask (MVC) + Docker
 
-Aplicação web da disciplina **Computação Distribuída (UFMS)**: um serviço Flask em arquitetura **MVC**, com painel administrativo (Flask-Admin), autenticação HTTP Basic, persistência via SQLAlchemy e banco em contêiner (Docker).
+> *Academic context — UFMS, Distributed Computing course.*
 
-## 🏗️ Arquitetura
+A Flask web service in **MVC** architecture: admin panel (Flask-Admin), HTTP Basic auth, SQLAlchemy persistence, and a containerized database (Docker).
+
+## Architecture
 ```
 CompDist/
-├── server.py            # bootstrap do servidor
-├── apps.py              # criação/configuração da app Flask
+├── server.py            # server bootstrap
+├── apps.py              # Flask app creation / config
 ├── app/
-│   ├── model.py         # modelos SQLAlchemy (ex.: Profile)
+│   ├── model.py         # SQLAlchemy models (e.g. Profile)
 │   ├── view.py          # views
-│   ├── controller.py    # controladores
-│   ├── routes.py        # rotas
+│   ├── controller.py    # controllers
+│   ├── routes.py        # routes
 │   ├── admin.py         # Flask-Admin
-│   ├── basic_auth.py    # autenticação HTTP Basic
-│   └── config.py        # configuração (lê de variáveis de ambiente)
+│   ├── basic_auth.py    # HTTP Basic auth
+│   └── config.py        # config (reads from environment variables)
 └── docker/
-    ├── start_db.sql     # init do banco
-    └── wait-for-it.sh   # espera o banco subir
+    ├── start_db.sql     # database init
+    └── wait-for-it.sh   # wait for the DB to be ready
 ```
 
-## 🔒 Configuração (sem segredos no código)
-Toda credencial vem de **variáveis de ambiente** (ou de um `cfg/app.cfg` local, ignorado pelo git). Copie o modelo:
+## How to run
 ```bash
-cp .env.example .env   # edite os valores
-```
-Variáveis: `SECRET_KEY`, `DATABASE` (URI SQLAlchemy), `DEFAULT_USERNAME`, `DEFAULT_PASSWORD`.
-
-## ▶️ Como rodar
-```bash
-# dependências
 pip install flask flask-admin flask-httpauth flask-sqlalchemy flask-migrate
 
-# subir o banco (Docker) e a app
-# (use docker/start_db.sql + wait-for-it.sh conforme seu compose)
+cp .env.example .env   # set SECRET_KEY, DATABASE (SQLAlchemy URI), DEFAULT_USERNAME, DEFAULT_PASSWORD
+
+# bring up the DB (Docker) via docker/start_db.sql + wait-for-it.sh, then:
 python server.py
 ```
 
-## 🛠️ Stack
+## Stack
 Python · Flask · Flask-Admin · Flask-SQLAlchemy · Flask-Migrate · HTTP Basic Auth · Docker
-
-> ✅ Secret-scan: sem credenciais hardcoded — `config.py` usa `os.getenv()`; `cfg/app.cfg`/`.env` ficam fora do versionamento.

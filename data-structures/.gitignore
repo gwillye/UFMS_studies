@@ -24,3 +24,7 @@ credentials*.json
 SENHAS.xlsx
 *.keystore
 *.pfx
+
+# Python
+__pycache__/
+*.pyc
